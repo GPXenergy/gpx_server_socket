@@ -1,0 +1,52 @@
+{
+  "name": "gpx-nodejs",
+  "version": "1.0.0",
+  "description": "gpx real time group meter data",
+  "main": "src/server.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
+    "prod": "tsc && node ./dist/server.js",
+    "run-prod": "node ./dist/server.js",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "test-c": "nyc --reporter=text mocha -r ts-node/register src/**/*.spec.ts"
+  },
+  "author": "Oanax",
+  "license": "ISC",
+  "dependencies": {
+    "@types/socket.io-redis": "^1.0.26",
+    "axios": "^0.19.0",
+    "ci": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "node-cache": "^5.1.2",
+    "pg": "^7.11.0",
+    "pg-format": "^1.0.4",
+    "socket.io": "^2.2.0",
+    "socket.io-redis": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.0",
+    "@types/express-session": "^1.15.13",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.10",
+    "@types/pg": "^7.4.14",
+    "@types/pg-format": "^1.0.0",
+    "@types/request": "^2.48.1",
+    "@types/socket.io": "^2.1.2",
+    "@types/socket.io-client": "^1.4.32",
+    "axios-mock-adapter": "^1.17.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2",
+    "mock-socket": "^9.0.2",
+    "nodemon": "^1.18.9",
+    "nyc": "^15.1.0",
+    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  }
+}
